@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: sha256
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
@@ -30,10 +30,10 @@ test:
     - xraydb
 
 about:
-  home: https://xraypy.github.io/XrayDB/
-  license: public domain
+  home: https://xraypy.github.io/XrayDB
+  license: PUBLIC-DOMAIN
   license_family: PUBLIC-DOMAIN
   license_file: LICENSE
-  summary: "X-ray Reference Data for the Elements"
+  summary: X-ray Reference Data for the Elements
   doc_url: https://xraypy.github.io/XrayDB
   dev_url: https://github.com/xraypy/XrayDB
