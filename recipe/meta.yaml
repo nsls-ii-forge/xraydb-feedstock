@@ -8,7 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: sha256
+  sha256: {{ sha256 }}
+  patches:
+    # This patch should be removed once https://github.com/xraypy/XrayDB/pull/1
+    # is resolved.
+    - test_xray.py.patch
 
 build:
   noarch: python
@@ -28,12 +32,18 @@ requirements:
 test:
   imports:
     - xraydb
+  requires:
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pytest -vvvv
 
 about:
-  home: https://xraypy.github.io/XrayDB/
-  license: public domain
+  home: https://xraypy.github.io/XrayDB
+  license: PUBLIC-DOMAIN
   license_family: PUBLIC-DOMAIN
   license_file: LICENSE
-  summary: "X-ray Reference Data for the Elements"
+  summary: X-ray Reference Data for the Elements
   doc_url: https://xraypy.github.io/XrayDB
   dev_url: https://github.com/xraypy/XrayDB
