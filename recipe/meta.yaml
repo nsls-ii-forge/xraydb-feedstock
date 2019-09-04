@@ -1,0 +1,39 @@
+{% set name = "xraydb" %}
+{% set version = "4.1" %}
+{% set sha256 = "c65b5b1da42e53d42bde136ada550918ea48eaa57ec81dd34ca105ccd1706158" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: sha256
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+    - numpy
+    - scipy
+    - sqlalchemy
+
+test:
+  imports:
+    - xraydb
+
+about:
+  home: https://xraypy.github.io/XrayDB/
+  license: public domain
+  license_family: PUBLIC-DOMAIN
+  license_file: LICENSE
+  summary: "X-ray Reference Data for the Elements"
+  doc_url: https://xraypy.github.io/XrayDB
+  dev_url: https://github.com/xraypy/XrayDB
