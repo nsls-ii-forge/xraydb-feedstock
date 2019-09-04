@@ -28,6 +28,12 @@ requirements:
 test:
   imports:
     - xraydb
+  requires:
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pytest -vvvv
 
 about:
   home: https://xraypy.github.io/XrayDB
