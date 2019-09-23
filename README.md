@@ -1,9 +1,9 @@
 About xraydb
 ============
 
-Home: https://xraypy.github.io/XrayDB/
+Home: https://xraypy.github.io/XrayDB
 
-Package license: public domain
+Package license: PUBLIC-DOMAIN
 
 Feedstock license: BSD 3-Clause
 
