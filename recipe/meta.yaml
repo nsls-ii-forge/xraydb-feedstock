@@ -9,10 +9,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    # This patch should be removed once https://github.com/xraypy/XrayDB/pull/1
-    # is resolved.
-    - test_xray.py.patch
 
 build:
   noarch: python
