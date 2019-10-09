@@ -1,6 +1,6 @@
 {% set name = "xraydb" %}
-{% set version = "4.2" %}
-{% set sha256 = "2509b33faae8e5bdc9d51273f6b7059656fd864e76803ffde44ad50c48ce391f" %}
+{% set version = "4.3" %}
+{% set sha256 = "cf1bfd80eb21c90710f1ca9c1c7131174ad3a409a2f61e12fefb8532e9459d22" %}
 
 package:
   name: {{ name|lower }}
