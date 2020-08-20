@@ -1,6 +1,6 @@
 {% set name = "xraydb" %}
-{% set version = "4.3.1" %}
-{% set sha256 = "cca3e97cea0118b2634278c045aecad0de4fc5247c07e484663e4e64e58fcc85" %}
+{% set version = "4.4.1" %}
+{% set sha256 = "b753765ff134c77d723429c6ba7272e8aec2cb157737d61da8067fc368a5c024" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
