@@ -5,7 +5,7 @@ Home: https://xraypy.github.io/XrayDB
 
 Package license: PUBLIC-DOMAIN
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: X-ray Reference Data for the Elements
 
